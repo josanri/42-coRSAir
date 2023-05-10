@@ -7,9 +7,9 @@ CC := gcc
 CFLAGS := -Wall -Wextra -Werror
 RM := rm -f
 
-INCLUDES := -I openssl/include -I include -DOPENSSL_API_COMPAT=10002
+INCLUDES := -I openssl-master/include -I include -DOPENSSL_API_COMPAT=10002
 
-LIBCRYPTO := openssl/libcrypto.a
+LIBCRYPTO := openssl-master/libcrypto.a
 
 .c.o:
 	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) $(INCLUDES) 

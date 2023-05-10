@@ -12,10 +12,6 @@
 
 #define DEBUG_CORSAIR 0
 
-void ft_leaks(void) {
-    system("leaks -q coRSAir");
-}
-
 void ft_save_private_key(RSA *priv_key, char *name) {
     unsigned char buffer_ciphered[1024];
     unsigned char buffer_plain[1024];
@@ -223,7 +219,6 @@ int main(int argc, char **argv) {
     char **ciphered_files = &argv[5];
     corsair_t *keys = NULL;
 
-    atexit(ft_leaks);
     if (argc != 7)
         return ft_usage_warning();
     if (strcmp("-k", argv[1]) == 0 && (strcmp("-f", argv[4]) == 0)) {
