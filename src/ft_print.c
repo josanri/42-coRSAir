@@ -8,8 +8,6 @@
 #include <openssl/pem.h>
 #include <openssl/err.h>
 
-
-
 void ft_print_warning_nl(char *s){
     printf("\033[0;31m%s\033[0m", s);
 }
